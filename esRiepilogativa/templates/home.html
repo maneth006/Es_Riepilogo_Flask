@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h2>Benvenuto, {{ username }}</h2>
+    <a href="{{ url_for('logout') }}">Esci</a>
+    <ul class="list-group">
+        {% for person in people %}
+            <li class="list-group-item">
+                <strong>{{ person['name'] }}</strong> - A bordo della navetta: {{ person['craft'] }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
